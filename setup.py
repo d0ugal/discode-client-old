@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="discode-cli",
+    name="discode",
     version="0.0.1",
     url="https://github.com/d0ugal/discode-cli",
     license="MIT",
@@ -16,7 +16,7 @@ setuptools.setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'discode = discode_cli:main',
+            'discode = discode:main',
         ]
     },
     classifier=[
