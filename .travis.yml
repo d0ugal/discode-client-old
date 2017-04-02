@@ -1,0 +1,22 @@
+sudo: false
+language: python
+python: '3.5'
+env:
+- TOXENV=pep8
+- TOXENV=py27
+- TOXENV=py35
+install:
+- pip install tox
+script:
+- git clean -f -d -x
+- tox
+deploy:
+  provider: pypi
+  user: d0ugal-deploy
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    repo: d0ugal/discode
+    condition: "$TOXENV = py35"
+  password:
+    secure: cvPcUO7aea0NQqF+QFFftxB4f/AlMO7WzWnxOZpnHcxieuUKY08jo0aqNHPMrvV8uksUxJ5p/qBHOqndHET4fA6ymClnn1Zzz7sRDMlejOoPqKU+KLxhIyHPJS6vCP4BgDharc9I/l+0MfysF7sXMIN/3fv6cJ5PU7/dFFDrM+9e7A3yMo0JQfdMeheulxt+lMR6RjfHMG0z8wwDiOBqTGsiyVW0FtmJ/oJ0sr7UC58TeXsmE1QvLLoIroQYuyBg0ZYCHa89h9BsstJ5fYhr/8BF6ojcMfP+wvo6tW4JPTd0hygYeZVUIIjmChslMy73qJytYlNltTlQdcAXNjrLvV2gy0YhALs9UbA3AOhnnhfM6PQFz4ALyoDH19yquMSA2qEhrDT2UVd/jVblXt5iR39xir5s/e/RLjdi7XNlfN8XM8tj7qjyN4CpMRb3qu8vAjqGvizWjIUf03D58r9xCoeMW1AptZ+dFlcSAmlS+d01mU70rQcUOf9gSNAzIzKQ56UMD2Jmc2w2yvrGphqOObCFk38qn2S1Vig7Ak+t2ExRQFlJg0foxc/77aUvywQgCV8R8/JRzshU42db1v5qoRnONIurMQUL5IGlklKF7X+Orbm3HCmC1Exm2FW0v08KYz5qz45tiqlUsTtJ4eCHsi5TLbnr5sZ3Go9o+Q652/c=
