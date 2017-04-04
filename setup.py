@@ -4,9 +4,11 @@ setuptools.setup(
     name="discode",
     version="0.0.3",
     url="https://github.com/d0ugal/discode-cli",
-    license="MIT",
+    license="BSD",
     description="Quick code review",
-    long_description="TODO",
+    long_description=(
+        "A simple utility to help you use www.discode.co from the command "
+        "line. See `discode --help` for more details."),
     author="Dougal Matthews",
     author_email="dougal@dougalmatthews.com",
     keywords='code review codereview discussion',
