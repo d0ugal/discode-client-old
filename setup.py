@@ -10,7 +10,7 @@ setuptools.setup(
     author="Dougal Matthews",
     author_email="dougal@dougalmatthews.com",
     keywords='code review codereview discussion',
-    packages=setuptools.find_packages(),
+    py_modules=['discode', ],
     include_package_date=True,
     zip_safe=False,
     install_requires=[],
