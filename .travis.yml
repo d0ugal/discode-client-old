@@ -4,7 +4,10 @@ python: '3.5'
 env:
 - TOXENV=pep8
 - TOXENV=py27
+- TOXENV=py33
+- TOXENV=py34
 - TOXENV=py35
+- TOXENV=py36
 install:
 - pip install tox
 script:
