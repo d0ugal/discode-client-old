@@ -13,7 +13,7 @@ except ImportError:
 
 PY2 = sys.version_info[0] == 2
 
-VERSION = "0.0.8"
+VERSION = "0.0.9"
 
 DESCRIPTION = """
 Discode is a simple utility to let you have quick and easy discussions around
