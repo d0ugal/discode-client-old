@@ -60,11 +60,11 @@ def main():
     if not args.files:
         stdin = _read_stdin()
         if stdin:
-            _post_paste(stdin, args.host, args.no_open)
+            _post_paste(stdin, args)
 
     for f in args.files:
         data = f.read()
-        _post_paste(data, args.host, args.no_open)
+        _post_paste(data, args)
 
 
 if __name__ == "__main__":
