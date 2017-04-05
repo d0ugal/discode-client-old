@@ -5,7 +5,7 @@ from discode import VERSION
 setuptools.setup(
     name="discode",
     version=VERSION,
-    url="https://github.com/d0ugal/discode-cli",
+    url="https://github.com/d0ugal/discode",
     license="BSD",
     description="Quick code review",
     long_description=(
