@@ -13,6 +13,8 @@ except ImportError:
 
 PY2 = sys.version_info[0] == 2
 
+VERSION = "0.0.6"
+
 
 def _parse_args(args):
     parser = argparse.ArgumentParser()
@@ -20,6 +22,8 @@ def _parse_args(args):
                         default=[])
     parser.add_argument('-n', '--no-open', action='store_true')
     parser.add_argument('-H', '--host', default="http://www.discode.co")
+    parser.add_argument('--version', action='version',
+                        version='%(prog)s ' + VERSION)
     parsed = parser.parse_args(args)
 
     if len(args) == 0:

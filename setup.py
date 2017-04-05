@@ -1,8 +1,10 @@
 import setuptools
 
+from discode import VERSION
+
 setuptools.setup(
     name="discode",
-    version="0.0.6",
+    version=VERSION,
     url="https://github.com/d0ugal/discode-cli",
     license="BSD",
     description="Quick code review",
