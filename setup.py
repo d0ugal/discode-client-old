@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="discode",
-    version="0.0.3",
+    version="0.0.6",
     url="https://github.com/d0ugal/discode-cli",
     license="BSD",
     description="Quick code review",
