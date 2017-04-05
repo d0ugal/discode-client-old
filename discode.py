@@ -15,9 +15,13 @@ PY2 = sys.version_info[0] == 2
 
 VERSION = "0.0.6"
 
+DESCRIPTION = """
+Discode is a simple utility to let you have quick and easy discussions around
+a bit of code. Part paste bin, part code review and super simple and easy to
+use."""
 
 def _parse_args(args):
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description=DESCRIPTION)
     parser.add_argument('files', type=argparse.FileType('rb'), nargs="*",
                         default=[])
     parser.add_argument('-n', '--no-open', action='store_true')
